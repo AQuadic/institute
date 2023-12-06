@@ -781,3 +781,132 @@ footer .content .copy {
   }
 }
 /*end customers*/
+/*end navbar*/
+.navbar-toggler {
+  border: 0 !important;
+}
+.toggler-icon {
+  width: 30px;
+  height: 3px;
+  background-color: #02b8f1;
+  display: block;
+  transition: all 0.2s;
+}
+/* Adds Space between the lines */
+.middle-bar {
+  margin: 5px auto;
+}
+
+/* State when navbar is opened (START) */
+.navbar-toggler .top-bar {
+  transform: rotate(45deg);
+  transform-origin: 10% 10%;
+}
+
+.navbar-toggler .middle-bar {
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+
+.navbar-toggler .bottom-bar {
+  transform: rotate(-45deg);
+  transform-origin: 10% 90%;
+}
+/* State when navbar is opened (END) */
+
+/* State when navbar is collapsed (START) */
+.navbar-toggler.collapsed .top-bar {
+  transform: rotate(0);
+}
+.navbar-toggler:focus {
+
+  box-shadow: none;
+  border: none !important;
+}
+.navbar-toggler.collapsed .middle-bar {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+.navbar-toggler.collapsed .bottom-bar {
+  transform: rotate(0);
+}
+/* State when navbar is collapsed (END) */
+
+/* Color of Toggler when collapsed */
+.navbar-toggler.collapsed .toggler-icon {
+  background-color: #173f85;
+}
+.navbar{}
+.navbar .container{
+  margin-left: auto;
+  margin-right: auto;
+}
+.navbar-nav {
+ gap: 34px;
+  align-items: center;
+}
+.navbar .navbar-collapse{
+justify-content: center;
+}
+.navbar .content{
+  margin: auto;
+}
+.nav-link:hover, .nav-link:focus {
+  color: white;
+}
+.navbar .itemLogo .navbar-brand{
+  margin: 0;
+}
+.navbar .dropdown-menu {
+  color: #212529;
+
+  background-color: #2b3d5f;
+  border: 1px solid #e6e4e4;
+}
+.mainLogo{
+  display: none;
+}
+.navbar .navbar-nav .nav-link{
+  color:  #0F172A;
+font-size: 16px;
+font-family: Roboto;
+font-weight: 500;
+line-height: 24px; 
+letter-spacing: 0.5px;
+}
+.navbar-collapse a{
+  color: white;
+}
+/*end navbar*/
+@media (max-width: 992px) {
+  .navbar .navbar-nav .nav-link{
+    color:white;
+ 
+  }
+  .navbar-nav {
+    gap: 10px;
+}
+  .mainLogo{
+    display: flex;
+  }
+  .navbar-collapse {
+    flex-basis: 100%;
+    flex-grow: 1;
+    align-items: center;
+    background: #173f85;
+    padding: 6px 24px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .navbar-collapse a{
+    color: white;
+  }
+  .navbar .itemLogo{
+    display: none;
+  }
+}
