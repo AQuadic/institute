@@ -304,6 +304,13 @@ html::-webkit-scrollbar-track {
   font-family: "RobotoBold";
   line-height: 24px;
   letter-spacing: 0.5px;
+  transition: 0.5s;
+}
+.party .partyInfo a:hover{
+  color: #04bbf1;
+  background: white;
+
+  box-shadow: 0px 25px 50px -12px rgb(99 141 151);
 }
 .party .partyImg {
   flex: 1;
@@ -334,6 +341,11 @@ html::-webkit-scrollbar-track {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: 0.3s;
+}
+.party .swiper-slide img:hover{
+  transform: scale(0.99); 
+  border-radius: 4px;
 }
 
 .party .swiper-slide {
@@ -503,6 +515,20 @@ html::-webkit-scrollbar-track {
   letter-spacing: 0.5px;
 }
 .contactUs .content a img {
+  opacity: 0;
+    position: relative;
+    left: 16px;
+    transition: 0.4s;
+width: 0px;
+}
+.contactUs .content a:hover{
+  box-shadow: 0px 25px 50px 0px rgb(67 81 137);
+
+}
+.contactUs .content a:hover img {
+opacity: 1;
+left: 0px;
+width: 24px;
 }
 @media (max-width: 768px) {
   .my90 {
@@ -611,7 +637,7 @@ footer .content .copy {
   border: none;
   background: #04bbf1;
   box-shadow: 0px 25px 50px 0px rgba(0, 0, 0, 0.25);
-  color: #fff;
+  color: #fff;background: #04bbf1;background: #04bbf1;
   font-size: 24px;
   font-family: Roboto;
   font-weight: 700;
@@ -621,6 +647,12 @@ footer .content .copy {
   text-align: end;
   max-width: fit-content;
   align-self: self-end;
+  transition: 0.6s;
+}
+.lang .content a:hover{
+  background: white;
+  color: #04bbf1;
+  box-shadow: 0px 25px 50px 0px rgb(65 188 243 / 37%);
 }
 @media (max-width: 1200px) {
   .lang .box {
@@ -691,8 +723,16 @@ footer .content .copy {
   max-width: 384px;
   border-radius: 12px;
   background-color: white;
+  transition: 0.4s;
 }
+.customers .swiper-slide:hover{
+  border-radius: 8px;
 
+}
+.customers .reviews .part:hover{
+  transform: scale(0.99);
+
+}
 .customers .reviews .part h3 {
   font-size: 24px;
   font-family: Roboto;
@@ -743,6 +783,7 @@ footer .content .copy {
   justify-content: center;
   align-items: center;
   border-radius: 12px;
+  transition: 0.4s;
 }
 .swiper-button {
   position: relative;
@@ -756,6 +797,15 @@ footer .content .copy {
   border: 2px solid #173f85;
   box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.07),
     0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+.swiper-button div:hover{
+  background: #204087;
+  border: 2px solid white;
+  box-shadow: 0px 0px 2px 0px rgb(32 64 135), 0px 1px 3px 0px rgb(32 64 135);
+}
+.swiper-button div:hover svg path {
+  stroke: white;
 }
 .swiper-button div::after {
   font-size: 23px;
@@ -821,6 +871,18 @@ footer .content .copy {
 /*end navbar*/
 .navbar-toggler {
   border: 0 !important;
+
+}
+.topNav{
+  top: 0;
+  position: absolute;
+  overflow: hidden;
+}
+.topleft{
+  left: 0;
+}
+.topRight{
+  right:  0;
 }
 .toggler-icon {
   width: 30px;
@@ -912,6 +974,25 @@ footer .content .copy {
   font-weight: 500;
   line-height: 24px;
   letter-spacing: 0.5px;
+  transition: 0.8s;
+  padding: 2px 8px;
+  position: relative;
+}
+.navbar .navbar-nav .nav-link:hover::before {
+
+  width: 70%;
+
+}
+.navbar .navbar-nav .nav-link::before {
+  transition: 0.3s;
+  content: "";
+  position: absolute;
+  width: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  height: 2px;
+  background: #3484c1;
 }
 .navbar-collapse a {
   color: white;
@@ -946,4 +1027,83 @@ footer .content .copy {
   .navbar .itemLogo {
     display: none;
   }
+  .topNav{
+   width: 50%;
+  }
+  .topNav svg{
+    width: 100%;
+   }
+ 
+}
+.num {
+  direction: ltr;
+  margin: auto;
+}
+.num {
+  
+  animation: countUp 2s ease-out;
+}
+
+@keyframes countUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.scroll-down.arrows span {
+  position: absolute;
+  display: inline-block;
+  top: 20px;
+  height: 25px;
+  width: 2px;
+  left: calc(50% - 1px);
+  animation: animateArrows 1.25s infinite linear;
+}
+@keyframes animateArrows {
+  0%,
+  40%,
+  100% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+  }
+}
+.scroll-down.arrows span:first-child {
+  top: 35px;
+  animation-delay: 0s;
+}
+.scroll-down.arrows span:nth-child(2) {
+  top: 35px;
+  animation-delay: 0.33s;
+}
+.scroll-down.arrows span:last-child {
+  top: 50px;
+  animation-delay: 0.66s;
+}
+.scroll-down.arrows span::before,
+.scroll-down.arrows span::after {
+  position: absolute;
+  content: "";
+  width: 3px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #173F85 ;
+  border-radius: 3px;
+}
+.scroll-down.arrows span::before {
+  transform-origin: bottom;
+  transform: rotate(-45deg);
+}
+.scroll-down.arrows span::after {
+  transform-origin: bottom;
+  margin-left: -1px;
+  transform: rotate(45deg);
 }

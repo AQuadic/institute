@@ -7,6 +7,8 @@
   <title>Document</title>
   <meta name="description" content="الداعم الأول والاقوى لابناء الجالية المصرية من طلاب المنهج المصري " />
   <meta name="keywords" content=" لابناء الجالية المصرية من طلاب المنهج المصري " />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.7/themes/odometer-theme-minimal.min.css" integrity="sha512-Jeqp8CoPCvf9tf/uWokfCTsFcv5BIhfTYaTTJA0NKn6B88zDSWe5d/9HTmZX63FGpGGQdB8Chg2khB96+wn4Tw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="css/bootstrap.css" />
   <link rel="stylesheet" href="./css/style.css" />
@@ -15,6 +17,16 @@
 <body>
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container">
+      <div class="topleft topNav">
+        <svg xmlns="http://www.w3.org/2000/svg" width="225" height="124" viewBox="0 0 225 124" fill="none">
+          <path opacity="0.2" d="M223.813 -5.5766C223.813 -5.5766 197.719 2.22649 184.184 28.2731C170.649 54.3196 148.503 20.006 133.161 28.8638C117.819 37.7216 117.73 55.6708 102.388 64.5286C87.0453 73.3864 71.4565 64.4887 56.1143 73.3466C40.7721 82.2044 55.5164 102.559 30.0911 117.239C4.66579 131.918 2.37976 112.547 -22.1202 120.547" stroke="#1F4487" stroke-width="2" stroke-linecap="round" stroke-dasharray="2 10"/>
+          </svg>
+      </div>
+      <div class="topRight topNav">
+        <svg xmlns="http://www.w3.org/2000/svg" width="200" height="131" viewBox="0 0 200 131" fill="none">
+          <path opacity="0.2" d="M1.56655 1.4234C1.56655 1.4234 27.661 9.22649 41.1959 35.2731C54.7307 61.3196 76.8769 27.006 92.2191 35.8638C107.561 44.7216 107.65 62.6708 122.992 71.5286C138.334 80.3864 153.923 71.4887 169.265 80.3466C184.608 89.2044 169.863 109.559 195.289 124.239C220.714 138.918 223 119.547 247.5 127.547" stroke="#1F4487" stroke-width="2" stroke-linecap="round" stroke-dasharray="2 10"/>
+          </svg>
+      </div>
       <a class="navbar-brand mainLogo" href="#">
         <svg xmlns="http://www.w3.org/2000/svg" width="72" height="71" viewBox="0 0 72 71" fill="none">
           <g clip-path="url(#clip0_8_3340)">
@@ -174,6 +186,8 @@
       </div>
     </div>
   </nav>
+ 
+  
   <section class="about">
     <div class="container">
       <div class="content">
@@ -190,6 +204,11 @@
       </div>
     </div>
   </section>
+  <div style="position: relative;">
+    <a href="javascript:;" class="scroll-down arrows">
+       <span></span> <span></span> <span></span>
+    </a>
+  </div>
   <section class="categories my80">
     <div class="container">
       <div class="content">
@@ -384,13 +403,13 @@
     </div>
     </div>
   </section>
-  <section class="count">
+  <section class="count" id="count">
     <div class="container">
       <div class="content">
         <div class="part">
           <img src="./images/school.svg" alt="" class="mainImg" />
           <div class="num">
-            <h2>17M</h2>
+            <h2 id="counter" data-to="19000000">0</h2>
 
 
           </div>
@@ -400,15 +419,15 @@
           <img src="./images/diamond.svg" alt="" class="mainImg" />
           <div class="num">
             <h2 class="valueNum">
-              <h2>1M</h2>
+              <h2  id="counter2" data-to="1000000">0</h2>
             </h2>
           </div>
           <p>المدرسين المعتمدين </p>
         </div>
-        <div class="part">
+        <div class="part ">
           <img src="./images/heart-circle-sharp.svg " alt="" class="mainImg" />
           <div class="num">
-            <h2>195</h2>
+            <h2  id="counter3" data-to="195">0</h2>
           </div>
           <p>سنوات الخبرة</p>
         </div>
@@ -443,6 +462,7 @@
     </div>
   </section>
 
+  
 
   <footer>
     <div class="container">
@@ -460,6 +480,8 @@
   <script src="js/bootstrap.js"></script>
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.7/odometer.min.js"></script>
+
   <!-- Initialize Swiper -->
   <script>
     var swiper = new Swiper(".mySwiper", {
@@ -502,6 +524,71 @@
       },
     });
   </script>
+  <script>
+    const numbers = document.querySelectorAll(".odometer")
+ numbers.forEach((number,i)=>{
+  const value = number.dataset.to;
+setInterval(()=>odometer[i].innerHTML = value,100)
+ })
+  </script>
+
+
+
+<script>
+  const targetValue = 500000000; // Example: 7500
+  const counterElement = document.getElementById('counter');
+  const counterElement2 = document.getElementById('counter2');
+  const counterElement3 = document.getElementById('counter3');
+  const counter = document.getElementById('count');
+  const animationDuration = 2000; // in milliseconds
+  const framesPerSecond = 60;
+
+
+
+  const functionElement = (e,value)=>{
+  
+    const increment = value / (animationDuration / 1000) / framesPerSecond;
+  let currentValue = 0;
+    const updateCounter = () => {
+    currentValue += increment;
+    e.textContent = formatNumber(currentValue.toFixed(1));
+
+    if (currentValue < value) {
+      requestAnimationFrame(updateCounter);
+    } else {
+      e.textContent = formatNumber(value.toFixed(1));
+    }
+  };
+  updateCounter()
+  
+  }
+
+
+  const formatNumber = (num) => {
+    if (num < 1000) {
+      return +num;
+    } else if (num < 1000000) {
+      return (num / 1000).toFixed(1) + 'K';
+    } else {
+      return (num / 1000000).toFixed(1) + 'M';
+    }
+   
+  };
+  let hasRun = false;
+  window.onscroll = ()=>{
+    //2834
+    const halfScreen =(window.screen.height /1.5)+window.scrollY
+    if (+counter.offsetTop <= halfScreen && !hasRun) {
+    functionElement(counterElement, counterElement.dataset.to);
+    functionElement(counterElement2, counterElement2.dataset.to);
+    functionElement(counterElement3, counterElement3.dataset.to);
+    // Set the flag to true to prevent further executions
+    hasRun = true;
+  }
+  }
+</script>
+
+
 </body>
 
 </html>
