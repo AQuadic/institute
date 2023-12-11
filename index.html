@@ -10,6 +10,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.7/themes/odometer-theme-minimal.min.css" integrity="sha512-Jeqp8CoPCvf9tf/uWokfCTsFcv5BIhfTYaTTJA0NKn6B88zDSWe5d/9HTmZX63FGpGGQdB8Chg2khB96+wn4Tw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./css/animate.css">
+
   <link rel="stylesheet" href="css/bootstrap.css" />
   <link rel="stylesheet" href="./css/style.css" />
 </head>
@@ -189,8 +191,15 @@
  
   
   <section class="about">
+    <div class="allImg" id="img">
+      <img src="./images/img1.png" class="img1 wow fadeInLeft" data-wow-duration="2s" data-wow-delay="0s" alt="aboutImg">
+      <img src="./images/img2.png" class="img2 wow fadeInRight" data-wow-duration="2s" data-wow-delay="0.1s" alt="aboutImg" alt="aboutImg">
+      <img src="./images/img3.png" class="img3 wow fadeInLeft" data-wow-duration="2s" data-wow-delay="0.2s" alt="aboutImg" alt="aboutImg">
+      <img src="./images/img4.png" class="img4 wow fadeInRight" data-wow-duration="2s" data-wow-delay="0.3s" alt="aboutImg" alt="aboutImg">
+    </div>
     <div class="container">
       <div class="content">
+      
         <img src="./images/image 1.png" class="mainImg" alt="main img" />
         <h2>اختيارك الأفضل</h2>
         <h3>
@@ -203,23 +212,24 @@
         </p>
       </div>
     </div>
+    <div style="position: relative;" class="downAnimation">
+      <a href="#two" class="scroll-down arrows">
+         <span></span> <span></span> <span></span>
+      </a>
+    </div>  
   </section>
-  <div style="position: relative;">
-    <a href="javascript:;" class="scroll-down arrows">
-       <span></span> <span></span> <span></span>
-    </a>
-  </div>
-  <section class="categories my80">
+  
+  <section class="categories my40" id="two">
     <div class="container">
       <div class="content">
-        <div class="part">
+        <div class="part  wow flipInY"  data-wow-duration="2s" data-wow-delay="0s">
           <div class="boxImg">
             <img src="./images/Icon4.svg" alt="category1" />
           </div>
           <h2>التعليم التفاعلي</h2>
           <p>طرق مبتكرة للتعلم، يشارك الطلاب في عملية التعلم</p>
         </div>
-        <div class="part">
+        <div class="part  wow flipInX"  data-wow-duration="2s" data-wow-delay="0.2s">
           <div class="boxImg">
             <img src="./images/Icon3.svg" alt="category1" />
           </div>
@@ -228,14 +238,14 @@
             أنشطة لتدعيم العملية التعليمية ولإسعاد الطلبة و ترغيبهم في التعلم
           </p>
         </div>
-        <div class="part">
+        <div class="part  wow flipInY"  data-wow-duration="2s" data-wow-delay="0.4s">
           <div class="boxImg">
             <img src="./images/Icon2.svg" alt="category1" />
           </div>
           <h2>اللغات</h2>
           <p>لعات عديدةـ أنجليزية، أسبانية، ألمانية , لغات أخرى،</p>
         </div>
-        <div class="part">
+        <div class="part  wow flipInX"  data-wow-duration="2s" data-wow-delay="0.6s">
           <div class="boxImg">
             <img src="./images/party.svg" alt="category1" />
           </div>
@@ -248,7 +258,7 @@
   <section class="bestChoice my80">
     <div class="container">
       <div class="content">
-        <div class="partInfo">
+        <div class="partInfo wow fadeInRight" data-wow-duration="2s" data-wow-delay="0s">
           <h2>الاختيار الأفضل لأبنائك في الخارج</h2>
           <p>
             صرح تعليمي مميز أنشيء خصيصا لخدمة أبناء الجالية المصرية في دولة
@@ -261,7 +271,7 @@
             <img src="./images/arrow-right.svg" alt="arrow-right" />
           </a>
         </div>
-        <div class="partImg">
+        <div class="partImg wow fadeInUp" data-wow-duration="3s" data-wow-delay="0s">
           <img src="./images/Col.png" alt="col" />
         </div>
       </div>
@@ -269,7 +279,7 @@
   </section>
   <section class="party m80">
     <div class="content">
-      <div class="partyInfo">
+      <div class="partyInfo  wow fadeInRight" data-wow-duration="2s" data-wow-delay="0s">
         <h2><span>قسم</span> حفلات التخرج وتكريم المتفوقين</h2>
         <p>
           يقدم المعهد حفلات متعددة للمتفوقين و الخرجين لتكريمهم و إسعادهم.
@@ -277,7 +287,7 @@
         </p>
         <a href="">اعرف أكثر</a>
       </div>
-      <div class="partyImg"><img src="./images/party1.png" alt="party" /></div>
+      <div class="partyImg wow fadeInLeft" data-wow-duration="2s" data-wow-delay="0s"><img src="./images/party1.png" alt="party" /></div>
     </div>
     <div class="swiper mySwiper">
       <div class="swiper-wrapper">
@@ -406,7 +416,7 @@
   <section class="count" id="count">
     <div class="container">
       <div class="content">
-        <div class="part">
+        <div class="part wow fadeInUp" data-wow-duration="2s" data-wow-delay="0s">
           <img src="./images/school.svg" alt="" class="mainImg" />
           <div class="num">
             <h2 id="counter" data-to="19000000">0</h2>
@@ -415,7 +425,7 @@
           </div>
           <p>أبناؤنا الخريجون </p>
         </div>
-        <div class="part">
+        <div class="part wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.1s">
           <img src="./images/diamond.svg" alt="" class="mainImg" />
           <div class="num">
             <h2 class="valueNum">
@@ -424,7 +434,7 @@
           </div>
           <p>المدرسين المعتمدين </p>
         </div>
-        <div class="part ">
+        <div class="part wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.2s">
           <img src="./images/heart-circle-sharp.svg " alt="" class="mainImg" />
           <div class="num">
             <h2  id="counter3" data-to="195">0</h2>
@@ -439,18 +449,18 @@
       <div class="box">
 
 
-        <div class="content">
+        <div class="content wow fadeInRight" data-wow-duration="1s" data-wow-delay="0s">
           <h2><span>قسم</span>اللغات</h2>
           <p>يقدم المعهد العديد من اللغات بطرق تعليمية متطورة و حديثة تناسب الصفوف الدراسية، تقدم بطرق تفاعلية حديثة
             تحفذ الطلبه علي الفهم والاستيعاب الجيد للمادة العلمية.</p>
-          <a href="">أعرف أكثر</a>
+          <a href="#" class=" wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">أعرف أكثر</a>
         </div>
       </div>
     </div>
   </section>
   <section class="contactUs my90">
     <div class="container">
-      <div class="content">
+      <div class="content  wow fadeInUp" data-wow-duration="2s" data-wow-delay="0s">
         <h2>ننتظر تواصلك</h2>
         <h3>توصلنا معانا للإطلاع علي كل العروض التي نقدمها، فريقنا متاح دائماً لمساعدتك</h3>
         <a href="">
@@ -475,13 +485,14 @@
       </div>
     </div>
   </footer>
+<script src="js/wow.min.js"></script>
   <script src="js/popper.min.js"></script>
   <script src="js/jquery-3.6.1.min.js"></script>
   <script src="js/bootstrap.js"></script>
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.7/odometer.min.js"></script>
-
+ 
   <!-- Initialize Swiper -->
   <script>
     var swiper = new Swiper(".mySwiper", {
@@ -524,16 +535,15 @@
       },
     });
   </script>
+   
   <script>
+       new WOW().init();
     const numbers = document.querySelectorAll(".odometer")
  numbers.forEach((number,i)=>{
   const value = number.dataset.to;
 setInterval(()=>odometer[i].innerHTML = value,100)
  })
   </script>
-
-
-
 <script>
   const targetValue = 500000000; // Example: 7500
   const counterElement = document.getElementById('counter');
@@ -587,7 +597,6 @@ setInterval(()=>odometer[i].innerHTML = value,100)
   }
   }
 </script>
-
 
 </body>
 
