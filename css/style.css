@@ -207,9 +207,7 @@ html::-webkit-scrollbar-track {
     margin-bottom: 50px;
     height: calc( 100vh - 300px);
 }
-.downAnimation{
-  top: -100px;
-}
+
 }
 /*end about*/
 /*start categories*/
