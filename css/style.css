@@ -1653,7 +1653,16 @@ html[dir=ltr] .navbar .navLang {
 }
 .contactUSPage .form-check .form-check-input {
   float: right;
-  margin-right: -1.5em;
+}
+html[dir=ltr] .contactUSPage .form-check .form-check-input{
+  float: left;
+  margin-right: 0px;
+  margin-left: -1.5em;
+
+}
+html[dir=ltr] .form-check {
+  
+  margin: 0;
 }
 .contactUSPage .form-check input {
   border-radius: 4px !important;
