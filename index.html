@@ -183,8 +183,8 @@
               الغات
             </a>
             <ul class="dropdown-menu">
-              <li><button class="dropdown-item" href="#">العربيه</button></li>
-              <li><button class="dropdown-item" href="#">English</button></li>
+              <li><button class="dropdown-item"  id="ch_langAr">العربيه</button></li>
+              <li><button class="dropdown-item"  id="ch_langEn">English</button></li>
             </ul>
           </li>
         </ul>
@@ -498,12 +498,6 @@
 
     </div>
   </section>
- 
-
-   
- 
-   
-  
 
   <footer>
     <div class="container">
@@ -526,6 +520,11 @@
  
   <!-- Initialize Swiper -->
   <script>
+      const btn_langAr = document.getElementById("ch_langAr");
+      const btn_langEn = document.getElementById("ch_langEn");
+      btn_langAr.addEventListener("click", ()=>{ window.document.dir = "rtl"});
+      btn_langEn.addEventListener("click", ()=>{ window.document.dir = "ltr"});
+
     var swiper = new Swiper(".mySwiper", {
       slidesPerView: "auto",
 
