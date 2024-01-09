@@ -98,6 +98,10 @@ html::-webkit-scrollbar-track {
   position: relative;
   overflow: hidden;
   padding-bottom: 100px;
+  background-image: url('../images/backHome.webp');
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
 }
 .about .content {
   max-width: 700px;
@@ -210,7 +214,7 @@ html::-webkit-scrollbar-track {
   .about {
     justify-content: space-between;
     margin-bottom: 50px;
-    height: calc(100vh - 300px);
+    height: calc(90vh - 300px);
   }
 }
 /*end about*/
@@ -333,6 +337,9 @@ html::-webkit-scrollbar-track {
 .bestChoice .content .partInfo a img {
   position: relative;
 }
+html[dir=ltr] .bestChoice .content .partInfo a img {
+  transform: rotateY(180deg);
+}
 @media (max-width: 992px) {
   .bestChoice .content {
     gap: 14px;
@@ -432,6 +439,7 @@ html::-webkit-scrollbar-track {
 .party .swiper {
   width: 100%;
   height: 210px;
+  direction: rtl;
 }
 
 .party .swiper-slide {
@@ -637,6 +645,10 @@ html::-webkit-scrollbar-track {
   left: 0px;
   width: 24px;
 }
+html[dir=ltr] .contactUs .content a:hover img {
+ 
+  transform: rotateY(180deg);
+}
 @media (max-width: 768px) {
   .contactUs .content h2 {
     font-size: 34px;
@@ -712,6 +724,11 @@ footer .content .copy {
   z-index: 50;
     position: relative;
 }
+html[dir=ltr] .lang .content{
+  margin-right: 0;
+  margin-left: auto;
+
+}
 .lang .content h2 {
   color: #0f172a;
   font-size: 56px;
@@ -780,6 +797,11 @@ footer .content .copy {
   .lang .content {
     margin-right: 0;
   }
+  html[dir=ltr] .lang .content{
+    margin-right: 0;
+    margin-left: 0;
+  
+  }
 }
 @media (max-width: 500px) {
   .lang .content {
@@ -823,6 +845,7 @@ footer .content .copy {
 .customers .reviews {
   padding: 40px 32px;
   background: #173f85;
+  direction: rtl;
 }
 .customers .reviews .part {
   display: flex;
@@ -937,6 +960,14 @@ footer .content .copy {
   left: 0px;
   right: auto;
 }
+html[dir=ltr] .swiper-button-prev, .swiper-rtl .swiper-button-next {
+  left: -100px;
+  right: auto;
+}
+html[dir=ltr] .swiper-button-next, .swiper-rtl .swiper-button-prev {
+  right: auto;
+  left: -30px;
+}
 @media (max-width: 768px) {
   .customers {
     padding-top: 46px;
@@ -975,6 +1006,9 @@ footer .content .copy {
 
     max-width: calc(100% - 70px);
   }
+  html[dir=ltr] .swiper-button-prev, .swiper-rtl .swiper-button-next {
+    left: -76px;
+}
 }
 /*end customers*/
 /*end navbar*/
@@ -996,7 +1030,7 @@ footer .content .copy {
 .toggler-icon {
   width: 30px;
   height: 3px;
-  background-color: #f90824;
+  background-color: #ea402f;
   display: block;
   transition: all 0.2s;
 }
@@ -1088,7 +1122,7 @@ footer .content .copy {
 }
 .navbar .dropdown-menu {
   color: #212529;
-
+  min-width: 100px;
   background-color: #2b3d5f;
   border: 1px solid #e6e4e4;
 }
@@ -1128,14 +1162,39 @@ footer .content .copy {
   height: 2px;
   background: #3484c1;
 }
-.navbar-collapse a {
+.navbar-collapse button.dropdown-item {
   color: white;
+  transition: 0.3s;
+  border-bottom: 1px solid #2b3d5f;
+border-top: 1px solid #2b3d5f;
+}
+.navbar-collapse button.dropdown-item:hover{
+  background: #173f85;
+border-bottom: 1px solid rgb(122, 122, 122);
+border-top: 1px solid rgb(126, 126, 126);
+}
+.navbar .navLang {
+  position: absolute;
+  right: 46px;
+}
+html[dir=ltr] .navbar .navLang {
+  left:  46px;
+  right: auto;
 }
 /*end navbar*/
 @media (max-width: 992px) {
   .navbar::before {
     top: 53px;
   }
+  .navbar .navLang {
+    position: relative;
+    right: 0px;
+    left: 0px;
+  }
+  html[dir=ltr] .navbar .navLang {
+    right: 0px;
+    left: 0px;
+}
   .navbar .navbar-nav .nav-link {
     color: white;
   }
@@ -1364,6 +1423,7 @@ footer .content .copy {
 /*end gallery*/
 .sliderBox {
   margin-bottom: 140px;
+    direction: rtl;
 }
 #tranding .tranding-slider {
   height: 575px;
