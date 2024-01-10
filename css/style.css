@@ -917,6 +917,9 @@ html[dir=ltr] .lang .content{
   border-radius: 12px;
   transition: 0.4s;
 }
+html[dir=ltr] .customers .swiper-slide{
+  direction: ltr;
+}
 .swiper-button {
   position: relative;
   max-width: 170px;
