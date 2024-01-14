@@ -1472,6 +1472,7 @@ html[dir="ltr"] .navbar .navLang {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 50px;
 }
 .tranding-slide .tranding-slide-content {
   position: absolute;
@@ -1602,6 +1603,9 @@ html[dir="ltr"] .navbar .navLang {
   }
   .gallery .content .info p {
     font-size: 20px;
+  }
+  .tranding-slide .tranding-slide-img img {
+    border-radius: 20px;
   }
 }
 /*start contactUSPage*/
