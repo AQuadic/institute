@@ -258,7 +258,11 @@ html::-webkit-scrollbar-track {
   font-family: "RobotoLight";
   line-height: 140%;
 }
-
+@media (max-width: 700px) {
+  .categories {
+    padding-top: 20px;
+}
+}
 /*end  categories*/
 /*start bestChoice*/
 .bestChoice {
@@ -942,7 +946,6 @@ html[dir="ltr"] .customers .swiper-slide {
 .swiper-button div::after {
   font-size: 23px;
   font-weight: bolder;
-  content: "";
   display: none;
 }
 .swiper-button-next svg,
@@ -2101,3 +2104,103 @@ footer .copy .linkCopy a {
   }
 }
 /*end footer*/
+/*headerSlider*/
+.headerSlider {
+  margin-bottom: 80px;
+  margin-top: -22px;
+}
+.headerSlider .content {
+  position: relative;
+  height: 500px;
+}
+.mySwiper3 {
+  height: 100%;
+}
+.headerSlider .content .centerImg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  max-height: 50%;
+  width: auto;
+  max-width: 60%;
+}
+.headerSlider .content .part {
+  height: 100%;
+  position: relative;
+}
+.headerSlider .content .part::before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  inset: 0 0;
+  background-color: rgba(22, 22, 22, 0.22);
+  z-index: 1;
+}
+.headerSlider .content .part img {
+  height: 100%;
+
+  width: 100%;
+  object-fit: cover;
+}
+
+.headerSlider .swiper-button1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 98%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  z-index: 50;
+}
+.headerSlider .swiper-button1 .swiper-button-next1,
+.headerSlider .swiper-button1 .swiper-button-prev1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(255 255 255 / 12%);
+  border: none;
+}
+.headerSlider .swiper-button1 svg path {
+  color: white;
+}
+.headerSlider .swiper-pagination-bullet {
+  height: 16px;
+  width: 16px;
+  background: #164084;
+  border: 1px white solid;
+  transition: 0.3s;
+}
+@media (max-width: 992px) {
+  .headerSlider .content {
+    height: 300px;
+  }
+  .headerSlider .swiper-button div {
+    height: 32px;
+    width: 32px;
+  }
+  .headerSlider .swiper-button1 svg {
+    height: 20px;
+    width: 20px;
+  }
+  .headerSlider .swiper-pagination-bullet {
+    height: 12px;
+    width: 12px;
+  }
+  .headerSlider {
+    margin-bottom: 40px;
+}
+}
+@media (max-width: 480px) {
+  .headerSlider .content {
+    height: 230px;
+  }
+  .headerSlider {
+    margin-bottom: 24px;
+}
+}
